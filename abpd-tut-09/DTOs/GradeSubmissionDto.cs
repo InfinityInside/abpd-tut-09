@@ -1,8 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace abpd_tut_09.DTOs;
 
 public class GradeSubmissionDto
 {
-    public int? Score { get; set; }
+    [Required]
+    [Range(0, int.MaxValue)]
+    public int Score { get; set; }
 
     public string? Feedback { get; set; }
 }
